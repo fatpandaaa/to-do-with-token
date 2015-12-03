@@ -1,0 +1,172 @@
+/* ==========================
+ * CSS for the entire app 
+ */
+
+html { 
+	overflow-y: scroll;
+}
+
+body {
+	padding-top: 50px;
+	background-color: #545454;
+}
+
+a {
+	color: white;
+}
+
+a:hover {
+	color: black;
+	text-decoration: none;
+}
+
+.jumbotron {
+	background-color: #2A2A2A;
+	color: white;
+}
+
+.login-text {
+	color: white;
+}
+
+#todo-list {
+	margin-bottom: 30px;
+}
+
+#todo-form {
+	margin-bottom: 30px;
+}
+
+.login-form-group input {
+	margin-bottom: 10px;
+}
+
+.failed-auth p {
+	color: #FF9D9D;
+	font-weight: bold;
+}
+
+#logout-button {
+	margin-top: 10px;
+}
+
+#user-lists {
+	margin-top: 10px;
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+#users {
+	text-align: center;
+}
+
+#list-form {
+	margin-bottom: 30px;
+}
+
+.in-line-left {
+	float: left;
+}
+
+.in-line-right {
+	float: right;
+}
+
+.clear {
+	clear: both;
+}
+
+.icon-button {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-bottom: 3px;
+}
+
+.icon-button:hover {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-radius: 5px;
+	margin-bottom: 3px;
+	background-color: gray;
+	color: white;
+	cursor: pointer;
+}
+
+.icon-button-sm {
+	padding-top: 3px;
+	padding-bottom: 3px;
+	margin-bottom: 3px;
+}
+
+.icon-button-sm:hover {
+	padding-top: 3px;
+	padding-bottom: 3px;
+	border-radius: 5px;
+	margin-bottom: 3px;
+	background-color: gray;
+	color: white;
+	cursor: pointer;
+}
+
+.list-item {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-bottom: 3px;
+	color: #B5D3FF;
+}
+
+.list-item:hover {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-bottom: 3px;
+	border-radius: 5px;
+	background-color: #B5D3FF;
+	color: black;
+	cursor: pointer;
+}
+
+.user-info {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.user-info div {
+	margin-bottom: 5px;
+}
+
+.user-create {
+	margin-top: 20px;
+}
+
+.todo-item {
+	color: white;
+	padding: 3px;
+	border-radius: 5px;
+}
+
+.todo-item:hover {
+	padding: 3px;
+	border-radius: 5px;
+	cursor: pointer;
+	background-color: gray;
+	color: black;
+}
+
+#list-name:hover {
+	cursor: pointer;
+}
+
+.input-xl {
+  height: 64px;
+  padding: 10px 16px;
+  font-size: 36px;
+  line-height: 1.3333333;
+  border-radius: 6px;
+  background-color: #2A2A2A;
+  color: white;
+  text-align: center;
+}
+
+.user-label {
+	color: white;
+}

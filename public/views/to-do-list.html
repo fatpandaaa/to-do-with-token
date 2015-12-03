@@ -1,0 +1,47 @@
+<div class="container">
+  <a ui-sref="lists">Back to my lists</a>
+
+  <div class="jumbotron text-center" ng-click="beginEditListName()" ng-hide="editingListName">
+    <h1><span id="list-name">{{list.name}}</span> <span class="label label-info" ng-show="userSession.user">{{ todos.length }}</span></h1>
+  </div>
+  <div class="jumbotron text-center" ng-show="editingListName">
+    <div class="container">
+      <input type="text" class="form-control input-xl" ng-model="list.name" ng-blur="updateListName()" required show-focus="editingListName">
+    </div>
+  </div>
+
+  <div id="todo-list" class="row" ng-show="userSession.user">
+
+      <div class="container" ng-repeat="todo in todos">
+        <div class="todo-item col-xs-10" ng-click="beginEditToDo(todo._id)">
+          <div ng-hide="isBeingEdited(todo._id)">
+            {{ todo.text }}
+          </div>
+          <div ng-show="isBeingEdited(todo._id)">
+            <input id="editMode" type="text" class="form-control input-sm" ng-model="todo.text" ng-blur="updateToDo(todo)" show-focus="isBeingEdited(todo._id)" required>
+          </div>
+        </div>
+        <div class="col-xs-2 icon-button-sm text-center" ng-click="deleteToDo(todo._id)" ng-hide="isBeingEdited(todo._id)">
+          <i class="fa fa-trash"></i>
+        </div>
+        <!-- Doesn't actually do anything, just here for show -->
+        <div class="col-xs-2 icon-button-sm text-center" ng-show="isBeingEdited(todo._id)">
+          <i class="fa fa-check"></i>
+        </div>
+      </div>
+  </div>
+
+  <div id="todo-form" class="row" ng-show="userSession.user">
+    <div class="col-sm-8 col-sm-offset-2 text-center">
+      <form name="toDoForm" ng-submit="createTodo(toDoForm.$valid)" novalidate>
+        <div class="form-group" ng-class="{ 'has-error' : errorAttempt }">
+          <input id="toDoInput" name="newToDo" type="text" class="form-control input-lg text-center" placeholder="What do you want to do?" ng-model="formData.text" required>
+        </div>
+        <div class="failed-auth" ng-show="errorAttempt">
+          <p>To-Do cannot be blank</p>
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg">Add</button>
+      </form>
+    </div>
+  </div>
+</div>
